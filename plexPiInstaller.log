@@ -1,0 +1,26 @@
+2023-06-07 15:59:47.N [ERROR] F
+2023-06-07 15:59:47.N [ERROR] F
+2023-06-07 15:59:47.N [ERROR] F
+2023-06-07 15:59:47.N [ERROR] F
+
+2023-06-07 16:00:09.N [INFO] testing is sucessful.
+2023-06-07 16:00:10.N [INFO] testing is sucessful.
+2023-06-07 16:00:10.N [INFO] testing is sucessful.
+2023-06-07 16:00:11.N [INFO] testing is sucessful.
+2023-06-07 16:00:11.N [INFO] testing is sucessful.
+2023-06-07 16:00:12.N [INFO] testing is sucessful.
+2023-06-07 16:00:12.N [INFO] testing is sucessful.
+2023-06-07 22:47:14.N [ERROR] failed
+2023-06-07 22:47:38.N [ERROR] failed
+This is a message.
+2023-06-07 22:47:50.N [ERROR] failed
+2023-06-07 22:48:24.N [ERROR] if you get the error '/usr/lib/apt/methods/https could not be found', then the https transport package has not been installed correctly.
+2023-06-11 19:18:53.N [ERROR] if the error '/usr/lib/apt/methods/https could not be found' is present, then the https transport package has not been installed correctly.
+2023-06-11 19:19:47.N [ERROR] if the error '/usr/lib/apt/methods/https could not be found' is present, then the https transport package has not been installed correctly.
+2023-06-11 19:20:11.N [ERROR] if the error '/usr/lib/apt/methods/https could not be found' is present, then the https transport package has not been installed correctly.
+2023-06-11 19:20:25.N [ERROR] if the error '/usr/lib/apt/methods/https could not be found' is present, then the https transport package has not been installed correctly.
+./plexPiInstaller.sh: line 32: plexPiInstaller.log: command not found
+2023-06-11 19:20:34.N [ERROR] if the error '/usr/lib/apt/methods/https could not be found' is present, then the https transport package has not been installed correctly.
+sudo: 3 incorrect password attempts
+sudo: a password is required
+2023-06-11 19:38:26.N [ERROR] using the root user was not a success.
