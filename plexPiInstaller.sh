@@ -25,11 +25,11 @@ else
         # if operation fails, code!=0, then print an error
         # message and exit the script
         operationCheck(){
-            if ! [[ $1 -ne 0 ]]; then
+            if ! [ $1 -ne 0 ]; then
                 echo $info $2
             else
                 echo $error $3
-                echo "An error has occured! Please check 'plexPiInstaller.log' for more info." >> /dev/tty
+                echo "An ERROR has occured! Please check 'plexPiInstaller.log' for more info." >> /dev/tty
                 exit 1
             fi
         }
@@ -58,16 +58,18 @@ else
 
         # # run update again to refresh the package list
         # sudo apt-get update
-        # operationCheck $? "upgraded installed packages confirming https transport package installed correctly." "failed to update installed packages. if you get the error '/usr/lib/apt/methods/https could not be found', then the https transport package was not installed correctly."
+        # operationCheck $? "upgraded installed packages confirming https transport package installed correctly." "failed to update installed packages! If you get the error '/usr/lib/apt/methods/https could not be found', then the https transport package was not installed correctly."
 
         # # install plex server
         # sudo apt install plexmediaserver
         # operationCheck $? "installed the plexmediaserver package." "failed to install the plexmediaserver packaged."
 
 
-        sudo pwd
-        operationCheck 3 "pwd printed." "using the root user was not a success."
+        # sudo chmod 777 /media
+        # operationCheck $? "changed the permission of the /media directory to 777." "failed to change the permission of the /media directory to 777! This could be due to not being able to run the chmod command as the root user."
 
+        # ip=$(hostname -I | cut -d " " -f 1)
+        # operationCheck $? "obtained the ip address of the raspberry pi: $ip" "faield to obtain the correct ip address the raspberry pi and the collected ip address is: $ip"
 
 
 
