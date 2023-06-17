@@ -24,3 +24,23 @@ This is a message.
 sudo: 3 incorrect password attempts
 sudo: a password is required
 2023-06-11 19:38:26.N [ERROR] using the root user was not a success.
+commands go here
+2023-06-17 12:03:37.N [INFO] things are working
+2023-06-17 12:03:37.N [ERROR] are not fine
+testing plexmediaserver.service
+plexPiInstaller.sh: line 97: operationCheck: command not found
+commands go here
+2023-06-17 12:07:55.N [INFO] things are working
+2023-06-17 12:07:55.N [ERROR] are not fine
+commands go here
+2023-06-17 12:11:24.N [INFO] things are working
+2023-06-17 12:11:24.N [ERROR] are not fine
+commands go here
+2023-06-17 12:11:34.N [INFO] things are working
+2023-06-17 12:11:34.N [ERROR] are not fine
+testing plexmediaserver.service
+plexPiInstaller.sh: line 97: operationCheck: command not found
+testing plexmediaserver.service
+2023-06-17 12:17:21.N [INFO] restarted plexmediaserver.service.
+testing plexmediaserver.service
+2023-06-17 12:27:25.N [INFO] restarted plexmediaserver.service.
