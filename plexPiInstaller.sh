@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Source operationCheck.sh
+. operationCheck.sh
+
 log=plexPiInstaller.log
 info="$(date +'%F %T.%N') [INFO] "
 warn="$(date +'%F %T.%N') [WARN] "
@@ -27,22 +30,8 @@ else
     do
     case $option in
         "Install Plex Media Server")
-        echo "You selected Install Plex Media Server"
 
         ( # print script output to a .log file
-
-            # Function to check the Return Code of an operation.
-            # if operation fails, code!=0, then print an error
-            # message and exit the script
-            operationCheck(){
-                if ! [ $1 -ne 0 ]; then
-                    echo $info $2
-                else
-                    echo $error $3
-                    echo "An ERROR has occured! Please check 'plexPiInstaller.log' for more info." >> /dev/tty
-                    exit 1
-                fi
-            }
 
             # # update packages installed
             # sudo apt-get update
@@ -89,45 +78,18 @@ else
         ;;
 
         "Check Plex Server Status")
-            # Function to check the Return Code of an operation.
-            # if operation fails, code!=0, then print an error
-            # message and exit the script
-            operationCheck(){
-                if ! [ $1 -ne 0 ]; then
-                    echo $info $2
-                else
-                    echo $error $3
-                    echo "An ERROR has occured! Please check 'plexPiInstaller.log' for more info." >> /dev/tty
-                    exit 1
-                fi
-            }
 
+            # Checking the status of plex server
             systemctl status plexmediaserver.service | tee -a $log
             operationCheck $? "Obtained the status of the plexmediaserver.service." "failed to check the status of plexmediaserver.service."
-            ;;
+        ;;
 
         "Restart Plex Server")
-        # echo "You selected Restart Plex Server"
-        # Add your code for Restart Plex Server here
-        (
-            # Function to check the Return Code of an operation.
-            # if operation fails, code!=0, then print an error
-            # message and exit the script
-            operationCheck(){
-                if ! [ $1 -ne 0 ]; then
-                    echo $info $2
-                else
-                    echo $error $3
-                    echo "An ERROR has occured! Please check 'plexPiInstaller.log' for more info." >> /dev/tty
-                    exit 1
-                fi
-            }
 
             # systemctl restart plexmediaserver.service
             echo "testing plexmediaserver.service"
             operationCheck $? "restarted plexmediaserver.service." "failed to restart plexmediaserver.service."
 
-        ) >> $log 2>&1
         ;;
 
         "Quit")
